@@ -1,0 +1,129 @@
+/* =========================
+   @region Font Tanımı
+   Projede kullanılan özel fontu ekler
+   ========================= */
+@font-face {
+  font-family: 'EduVICWANTHand';
+  src: url('Edu_VIC_WA_NT_Hand/static/EduVICWANTHand-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* =========================
+   @region Genel Layout Ayarları
+   Sayfanın temel yüksekliği ve flex düzeni
+   ========================= */
+html, body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex; /* Dikeyde sıralama için flex kullanıldı */
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'EduVICWANTHand', Arial, sans-serif;
+  background: #f8f6f4;
+}
+
+/* =========================
+   @region Header (Üst Menü)
+   ========================= */
+header {
+  flex: 0 0 auto;
+  background: #a3cef1;
+  color: #22223b;
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 2px solid #a3cef1;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+}
+
+nav a {
+  color: #22223b;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff6f61;
+}
+
+/* =========================
+   @region Main (İçerik ve Scroll İşlemi)
+   Sadece bu alan kaydırılabilir (scrollable)
+   ========================= */
+main {
+  flex: 1 1 auto;
+  overflow-y: auto; /* Sadece içerik alanı kaydırılabilir */
+  padding: 30px 10px 60px 10px;
+  box-sizing: border-box;
+  border-top: 2px solid #a3cef1;
+  border-bottom: 2px solid #a3cef1;
+}
+
+.center {
+  text-align: center;
+}
+
+.center-list {
+  list-style-position: inside;
+  text-align: center;
+  padding-left: 0;
+}
+
+.center-list li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+/* =========================
+   @region Ürün Kartları
+   ========================= */
+.product-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.product {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+.product img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   @region Footer (Alt Bilgi)
+   ========================= */
+footer {
+  flex: 0 0 auto;
+  background: #a3cef1;
+  color: #22223b;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+} 
